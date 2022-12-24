@@ -80,10 +80,21 @@ class UserLogin(MethodView):
             return {"access_token": access_token}, 200
 
         abort(401, message="Invalid credentials.")
-        
+
+@blp.route("/user")
+class User_v(MethodView):
+    @blp.response(200, UserSchema(many=True))
+    @jwt_required()
+    def get(self):
+        jwt = get_jwt()
+        if not jwt.get("is_admin"):
+            abort(401, message="Admin privilege required.")
+        return UserModel.query.all()
+       
 def send_simple_message(to,subject,body):
     domain = os.getenv("MAILGUN_DOMAIN")
     return requests.post(
 		f"https://api.mailgun.net/v3/{domain}/messages",
 		auth=("api", os.getenv("MAILGUN_API_KEY")),
 		data={"from": "Blasti <Blasti-TN@business.tn>","to": [to],"subject": subject,"text": body})
+    
