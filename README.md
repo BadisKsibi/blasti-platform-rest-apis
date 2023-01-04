@@ -3,7 +3,7 @@ Welcome to the Blasti REST API documentation. This API allows clients to access 
 
 Endpoints:
 The following endpoints are available for interacting with the Blasti API:
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 Store Categories
 GET /store_cat: Retrieve a list of store categories.
 
@@ -25,7 +25,7 @@ PUT /store_cats/:storeCatId: Update a specific store category.
 Description: This endpoint allows an authenticated user to update the name of a specific store category on the Blasti platform. The request body should include the updated name.
 Success: 200 OK
 Failure: 400 BAD REQUEST, 401 UNAUTHORIZED, 404 NOT FOUND
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 Merchandise
 GET /merchandise: Retrieve a list of merchandise.
 
@@ -52,7 +52,7 @@ DELETE /merchandise/:merchandiseId: Delete a specific piece of merchandise.
 Description: This endpoint allows an authenticated user to delete a specific piece of merchandise from the Blasti platform.
 Success: 200 OK
 Failure: 401 UNAUTHORIZED, 404 NOT FOUND
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 Users
 POST /users/register: Register a new user.
 
