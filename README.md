@@ -1,32 +1,32 @@
-Blasti REST API
-Welcome to the Blasti REST API documentation. This API allows clients to access and manipulate data for the Blasti e-ticketing platform, enabling the purchase of tickets and access to exclusive merchandise for sporting events in Tunisia.
+#Blasti REST API
+##Welcome to the Blasti REST API documentation. This API allows clients to access and manipulate data for the Blasti e-ticketing platform, enabling the purchase of tickets and access to exclusive merchandise for sporting events in Tunisia.
 
-Endpoints:
-The following endpoints are available for interacting with the Blasti API:
+##Endpoints:
+##The following endpoints are available for interacting with the Blasti API:
 
-Store Categories
-GET /store_cat: Retrieve a list of store categories.
+##Store Categories
+####GET /store_cat: Retrieve a list of store categories.
 
-Description: This endpoint returns a list of all store categories available on the Blasti platform. Each store category includes a unique ID and a name.
-Success: 200 OK
-Failure: 401 UNAUTHORIZED
-POST /store_cat: Create a new store category.
+####Description: This endpoint returns a list of all store categories available on the Blasti platform. Each store category includes a unique ID and a name.
+####Success: 200 OK
+####Failure: 401 UNAUTHORIZED
+####POST /store_cat: Create a new store category.
 
-Description: This endpoint allows an authenticated user to create a new store category on the Blasti platform. The request body should include the name of the store category.
-Success: 201 CREATED
-Failure: 400 BAD REQUEST, 401 UNAUTHORIZED
-GET /store_cat/:storeCatId: Retrieve a specific store category.
+####Description: This endpoint allows an authenticated user to create a new store category on the Blasti platform. The request body should include the name of the store ####category.
+####Success: 201 CREATED
+####Failure: 400 BAD REQUEST, 401 UNAUTHORIZED
+####GET /store_cat/:storeCatId: Retrieve a specific store category.
 
-Description: This endpoint returns detailed information about a specific store category, including its ID and name.
-Success: 200 OK
-Failure: 401 UNAUTHORIZED, 404 NOT FOUND
-PUT /store_cats/:storeCatId: Update a specific store category.
+####Description: This endpoint returns detailed information about a specific store category, including its ID and name.
+####Success: 200 OK
+####Failure: 401 UNAUTHORIZED, 404 NOT FOUND
+####PUT /store_cats/:storeCatId: Update a specific store category.
 
-Description: This endpoint allows an authenticated user to update the name of a specific store category on the Blasti platform. The request body should include the updated name.
-Success: 200 OK
-Failure: 400 BAD REQUEST, 401 UNAUTHORIZED, 404 NOT FOUND
+####Description: This endpoint allows an authenticated user to update the name of a specific store category on the Blasti platform. The request body should include the updated name.
+####Success: 200 OK
+####Failure: 400 BAD REQUEST, 401 UNAUTHORIZED, 404 NOT FOUND
 
-Merchandise
+####Merchandise
 GET /merchandise: Retrieve a list of merchandise.
 
 Description: This endpoint returns a list of all merchandise available on the Blasti platform. Each piece of merchandise includes a unique ID, a name, a description, and a price.
